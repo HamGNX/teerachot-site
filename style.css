@@ -1,0 +1,239 @@
+/* Base layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #050816;
+  --bg-alt: #0b1020;
+  --card-bg: #0f172a;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.12);
+  --text: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border-subtle: rgba(148, 163, 184, 0.3);
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.85);
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+  --max-width: 960px;
+  --section-gap: 2.4rem;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  background: linear-gradient(
+      135deg,
+      rgba(56, 189, 248, 0.16),
+      transparent 40%,
+      rgba(139, 92, 246, 0.16)
+    ),
+    radial-gradient(circle at top left, #020617 0, #020617 55%);
+}
+
+.site-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.8rem 1.25rem 1.4rem;
+}
+
+.site-title {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin: 0 0 0.35rem;
+}
+
+.site-subtitle {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.site-tagline {
+  margin: 0.4rem 0 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+/* Nav */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.site-nav a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease,
+    transform 0.1s ease;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+  border-color: rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.95);
+  transform: translateY(-1px);
+}
+
+/* Main content */
+.content {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 1.8rem auto 2.4rem;
+  padding: 0 1.25rem 0.5rem;
+  flex: 1;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.4rem;
+  margin-bottom: var(--section-gap);
+  border: 1px solid rgba(15, 23, 42, 0.9);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    var(--accent-soft),
+    transparent 55%
+  );
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.section-note {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* About */
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.about-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Badges */
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.badge-row img {
+  height: 26px;
+  max-width: 100%;
+}
+
+/* Tech stack groups */
+.stack-group + .stack-group {
+  margin-top: 1.6rem;
+}
+
+.stack-group h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.02rem;
+}
+
+/* GitHub stats */
+.stats-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.stats-grid img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  background: #020617;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
+  padding: 0.9rem 1.25rem 1.3rem;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  background: #020617;
+}
+
+/* Responsive tweaks */
+@media (min-width: 720px) {
+  .card {
+    padding: 1.8rem 1.9rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats-grid img:last-child {
+    grid-column: 1 / -1;
+    max-width: 70%;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header-inner {
+    padding-top: 1.4rem;
+  }
+
+  .badge-row img {
+    height: 24px;
+  }
+}
