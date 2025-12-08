@@ -5,20 +5,30 @@
   <title>Teerachot Khusuwan | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Teerachot Khusuwan – Computer Engineering student at SIIT, interested in cybersecurity, low-level systems, AI/ML, and robotics." />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="page">
     <header class="site-header">
       <div class="site-header-inner">
-        <h1 class="site-title">Teerachot Khusuwan</h1>
-        <p class="site-subtitle">
-          Computer Engineering @ SIIT (Class of 2026)
-        </p>
+        <div class="brand">
+          <div class="brand-dot" aria-hidden="true"></div>
+          <div>
+            <h1 class="site-title">Teerachot Khusuwan</h1>
+            <p class="site-subtitle">Computer Engineering @ SIIT (Class of 2026)</p>
+          </div>
+        </div>
         <p class="site-tagline">
           Cybersecurity • Low-level systems • AI/ML • Robotics • Hardware tinkering
         </p>
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Primary">
           <a href="#about">About</a>
           <a href="#socials">Socials</a>
           <a href="#tech-stack">Tech Stack</a>
@@ -28,16 +38,63 @@
     </header>
 
     <main class="content">
+      <!-- Hero -->
+      <section class="card hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Security-minded engineer</p>
+          <h2 class="hero-title">I build and break things to make systems safer.</h2>
+          <p class="hero-lead">
+            Focused on cybersecurity, low-level systems, and practical ML/robotics. Currently exploring how to harden compute stacks and ship reliable tooling.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="mailto:teerachot.khusuwan@gmail.com">Email me</a>
+            <a class="btn ghost" href="https://github.com/HamGNX" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-label">Current focus</span>
+              <span class="meta-value">Network security • Jetson robotics</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">Bangkok, TH (remote friendly)</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-badges" aria-label="Highlights">
+          <div class="stat-pill">
+            <span class="pill-label">Years coding</span>
+            <span class="pill-value">4+</span>
+          </div>
+          <div class="stat-pill">
+            <span class="pill-label">Domains</span>
+            <span class="pill-value">Cyber • ML • IoT</span>
+          </div>
+          <div class="stat-pill">
+            <span class="pill-label">Tools</span>
+            <span class="pill-value">C/C++ • Python • CUDA</span>
+          </div>
+        </div>
+      </section>
+
       <!-- About -->
       <section id="about" class="card">
         <h2>💫 About Me</h2>
-        <ul class="about-list">
-          <li>🎓 Computer Engineering student at SIIT, Thammasat University (Class of 2026)</li>
-          <li>🛡️ Interested in cybersecurity, low-level system work, and making computers do weird but useful things</li>
-          <li>🤖 Also into AI/ML, robotics (JetBot / Jetson Nano), and random hardware experiments</li>
-          <li>🧪 I like breaking things (ethically), then building tools to detect or fix them</li>
-          <li>🎮 Off-duty: PC hardware nerd, TFT enjoyer, and professional “tweak every setting” person</li>
-        </ul>
+        <div class="about-grid">
+          <div>
+            <p class="lead">
+              I am a computer engineering student who blends security thinking with hands-on builds—ranging from low-level tooling to robotics on Jetson platforms.
+            </p>
+            <p class="muted">Currently looking for internships or collaborations where I can ship practical systems, harden infra, and learn from strong engineers.</p>
+          </div>
+          <ul class="about-list">
+            <li>🎓 Computer Engineering at SIIT, Thammasat University (Class of 2026)</li>
+            <li>🛡️ Enjoys finding edge cases, writing small exploit demos, and then patching them</li>
+            <li>🤖 Builds JetBot / Jetson Nano projects; experiments with perception pipelines</li>
+            <li>🧪 Turns curiosity into quick prototypes, CLI tools, or dashboards</li>
+            <li>🎮 PC hardware tinkerer and avid TFT optimizer</li>
+          </ul>
+        </div>
       </section>
 
       <!-- Socials -->
