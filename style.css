@@ -5,6 +5,17 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  /* leave space for the sticky header when jumping to anchors */
+  scroll-padding-top: 120px; /* you can tweak this value */
+}
+
+/* Prevent sticky header from covering anchored sections */
+section[id] {
+  scroll-margin-top: 120px; /* match scroll-padding-top value */
+}
+
 :root {
   --bg: #050816;
   --bg-alt: #0b1020;
@@ -22,6 +33,13 @@
   --section-gap: 2.4rem;
 }
 
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 html,
 body {
   margin: 0;
@@ -31,6 +49,24 @@ body {
   font-family: "Space Grotesk", "SF Pro Text", "Plus Jakarta Sans",
     system-ui, -apple-system, "Segoe UI", sans-serif;
   line-height: 1.5;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 8px 12px;
+  border-radius: 0 0 8px 0;
+  z-index: 50;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 .page {
@@ -145,6 +181,14 @@ body {
   border-color: rgba(148, 163, 184, 0.6);
   background: rgba(15, 23, 42, 0.95);
   transform: translateY(-1px);
+}
+
+/* Focus styles for accessibility */
+.site-nav a:focus,
+.btn:focus,
+.pub-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 /* Main content */
@@ -413,10 +457,6 @@ body {
   font-weight: 700;
 }
 
-/* -------------------------------------------------------------------
-   NEW ADDITIONS BELOW
-   ------------------------------------------------------------------- */
-
 /* Project Grid Layout */
 .project-grid {
   display: grid;
@@ -425,13 +465,13 @@ body {
 }
 
 .project-item {
-  background: rgba(2, 6, 23, 0.5); /* Darker background inside the card */
+  background: rgba(2, 6, 23, 0.5);
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
   padding: 1.25rem;
   transition: transform 0.2s ease, border-color 0.2s ease;
   display: flex;
-  flex-direction: column; /* Ensure footer actions align at bottom if needed */
+  flex-direction: column;
 }
 
 .project-item:hover {
@@ -451,7 +491,7 @@ body {
   color: var(--text-muted);
   margin-bottom: 1rem;
   line-height: 1.6;
-  flex: 1; /* Pushes action tags to bottom if height varies */
+  flex: 1;
 }
 
 /* Publication Styling */

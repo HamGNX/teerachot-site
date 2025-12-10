@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Skip link for keyboard users -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <div class="page">
     <header class="site-header">
       <div class="site-header-inner">
@@ -37,7 +40,7 @@
       </div>
     </header>
 
-    <main class="content">
+    <main id="main" class="content">
       <section class="card hero">
         <div class="hero-copy">
           <p class="eyebrow">Security-minded engineer</p>
@@ -53,7 +56,7 @@
           <div class="hero-meta">
             <div class="meta-item">
               <span class="meta-label">Current focus</span>
-              <span class="meta-value">Network security • Jetson robotics</span>
+              <span class="meta-value">Network security • Software Development</span>
             </div>
             <div class="meta-item">
               <span class="meta-label">Location</span>
@@ -72,7 +75,7 @@
           </div>
           <div class="stat-pill">
             <span class="pill-label">Tools</span>
-            <span class="pill-value">C/C++ • Python • CUDA</span>
+            <span class="pill-value">PHP • Python • CUDA</span>
           </div>
         </div>
       </section>
@@ -99,7 +102,6 @@
       <section id="projects" class="card">
         <h2>🚀 Featured Projects</h2>
         <div class="project-grid">
-          
           <div class="project-item">
             <h3 class="project-title">SQLIX: Injection Detection</h3>
             <p class="project-desc">
@@ -147,17 +149,26 @@
               <span class="eyebrow">Full Stack</span>
             </div>
           </div>
-      
         </div>
       </section>
 
       <section id="publications" class="card">
         <h2>📄 Publications</h2>
         <div class="publication-item">
-          <a href="https://ph02.tci-thaijo.org/index.php/SciTechAsia/article/view/261438" target="_blank" class="pub-link">
-            <span class="pub-title">Automated Detection and Segmentation of Choroidal Neovascularization in OCT Using Deep Learning ↗</span>
+          <a
+            href="https://ph02.tci-thaijo.org/index.php/SciTechAsia/article/view/261438"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="pub-link"
+          >
+            <span class="pub-title">
+              Automated Detection and Segmentation of Choroidal Neovascularization in OCT Using Deep Learning ↗
+            </span>
           </a>
-          <p class="muted" style="margin: 0.2rem 0;">Pawaris Panyasombat, Anawin Srivoranan, Chanyanud Sriyota, <strong>Teerachot Khusuwan</strong>, Pakinee Aimmanee</p>
+          <p class="muted" style="margin: 0.2rem 0;">
+            Pawaris Panyasombat, Anawin Srivoranan, Chanyanud Sriyota,
+            <strong>Teerachot Khusuwan</strong>, Pakinee Aimmanee
+          </p>
           <span class="pub-journal">Science & Technology Asia, 30(3), 40–50 (2025)</span>
         </div>
       </section>
@@ -167,74 +178,77 @@
         <p class="section-note">Find me around the internet:</p>
         <div class="badge-row">
           <a href="https://facebook.com/ham.khu03" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white" alt="Facebook" />
+            <img loading="lazy" src="https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white" alt="Facebook" />
           </a>
           <a href="https://instagram.com/ham._.trc" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white" alt="Instagram" />
+            <img loading="lazy" src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white" alt="Instagram" />
           </a>
           <a href="https://linkedin.com/in/teerachot-khusuwan" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn" />
+            <img loading="lazy" src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn" />
           </a>
           <a href="mailto:teerachot.khusuwan@gmail.com">
-            <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email" />
+            <img loading="lazy" src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email" />
           </a>
         </div>
       </section>
 
       <section id="tech-stack" class="card">
-  <h2>💻 Technical Arsenal</h2>
-  <p class="section-note">Tools used in production, research, and security validations.</p>
+        <h2>💻 Technical Arsenal</h2>
+        <p class="section-note">Tools used in production, research, and security validations.</p>
 
-  <div class="stack-group">
-    <h3>Core & Systems</h3>
-    <div class="badge-row">
-      <img src="https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54" alt="Python" />
-      <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white" alt="C++" />
-      <img src="https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white" alt="C" />
-      <img src="https://img.shields.io/badge/bash-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white" alt="Bash" />
-      <img src="https://img.shields.io/badge/cuda-000000.svg?style=flat&logo=nVIDIA&logoColor=green" alt="CUDA" />
-      <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white" alt="Docker" />
-    </div>
-  </div>
+        <div class="stack-group">
+          <h3>Core & Systems</h3>
+          <div class="badge-row">
+            <img loading="lazy" src="https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54" alt="Python" />
+            <img loading="lazy" src="https://img.shields.io/badge/c++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white" alt="C++" />
+            <img loading="lazy" src="https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white" alt="C" />
+            <img loading="lazy" src="https://img.shields.io/badge/bash-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white" alt="Bash" />
+            <img loading="lazy" src="https://img.shields.io/badge/cuda-000000.svg?style=flat&logo=nVIDIA&logoColor=green" alt="CUDA" />
+            <img loading="lazy" src="https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white" alt="Docker" />
+          </div>
+        </div>
 
-  <div class="stack-group">
-    <h3>Data Science & AI (Research)</h3>
-    <div class="badge-row">
-      <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white" alt="PyTorch" />
-      <img src="https://img.shields.io/badge/opencv-%23white.svg?style=flat&logo=opencv&logoColor=black" alt="OpenCV" />
-      <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=flat&logo=numpy&logoColor=white" alt="NumPy" />
-      <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=flat&logo=pandas&logoColor=white" alt="Pandas" />
-      <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat&logo=scikit-learn&logoColor=white" alt="scikit-learn" />
-    </div>
-  </div>
+        <div class="stack-group">
+          <h3>Data Science & AI (Research)</h3>
+          <div class="badge-row">
+            <img loading="lazy" src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white" alt="PyTorch" />
+            <img loading="lazy" src="https://img.shields.io/badge/opencv-%23white.svg?style=flat&logo=opencv&logoColor=black" alt="OpenCV" />
+            <img loading="lazy" src="https://img.shields.io/badge/numpy-%23013243.svg?style=flat&logo=numpy&logoColor=white" alt="NumPy" />
+            <img loading="lazy" src="https://img.shields.io/badge/pandas-%23150458.svg?style=flat&logo=pandas&logoColor=white" alt="Pandas" />
+            <img loading="lazy" src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat&logo=scikit-learn&logoColor=white" alt="scikit-learn" />
+          </div>
+        </div>
 
-  <div class="stack-group">
-    <h3>Web & Database</h3>
-    <div class="badge-row">
-      <img src="https://img.shields.io/badge/flask-%23000.svg?style=flat&logo=flask&logoColor=white" alt="Flask" />
-      <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white" alt="PHP" />
-      <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=flat&logo=mysql&logoColor=white" alt="MySQL" />
-      <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white" alt="HTML5" />
-      <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
-    </div>
-  </div>
+        <div class="stack-group">
+          <h3>Web & Database</h3>
+          <div class="badge-row">
+            <img loading="lazy" src="https://img.shields.io/badge/flask-%23000.svg?style=flat&logo=flask&logoColor=white" alt="Flask" />
+            <img loading="lazy" src="https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white" alt="PHP" />
+            <img loading="lazy" src="https://img.shields.io/badge/mysql-4479A1.svg?style=flat&logo=mysql&logoColor=white" alt="MySQL" />
+            <img loading="lazy" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white" alt="HTML5" />
+            <img loading="lazy" src="https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
+          </div>
+        </div>
 
-  <div class="stack-group">
-    <h3>IoT & Hardware</h3>
-    <div class="badge-row">
-      <img src="https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=flat&logo=Raspberry-Pi" alt="Raspberry Pi" />
-      <img src="https://img.shields.io/badge/Arduino-00979D?style=flat&logo=Arduino&logoColor=white" alt="Arduino" />
-      <img src="https://img.shields.io/badge/home%20assistant-%2341BDF5.svg?style=flat&logo=home-assistant&logoColor=white" alt="Home Assistant" />
-    </div>
-  </div>
-
-</section>
+        <div class="stack-group">
+          <h3>IoT & Hardware</h3>
+          <div class="badge-row">
+            <img loading="lazy" src="https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=flat&logo=Raspberry-Pi" alt="Raspberry Pi" />
+            <img loading="lazy" src="https://img.shields.io/badge/Arduino-00979D?style=flat&logo=Arduino&logoColor=white" alt="Arduino" />
+            <img loading="lazy" src="https://img.shields.io/badge/home%20assistant-%2341BDF5.svg?style=flat&logo=home-assistant&logoColor=white" alt="Home Assistant" />
+          </div>
+        </div>
+      </section>
 
       <section id="github-stats" class="card">
         <h2>📊 GitHub Stats</h2>
         <p class="section-note">Some auto-generated stats from my GitHub activity:</p>
         <div class="stats-grid">
-          <img src="https://nirzak-streak-stats.vercel.app/?user=HamGNX&theme=dark&hide_border=true" alt="GitHub streak stats for HamGNX" />
+          <img
+            loading="lazy"
+            src="https://nirzak-streak-stats.vercel.app/?user=HamGNX&theme=dark&hide_border=true"
+            alt="GitHub streak stats for HamGNX"
+          />
         </div>
       </section>
     </main>
