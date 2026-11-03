@@ -2,273 +2,339 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Teerachot Khusuwan | Portfolio</title>
+  <title>Teerachot Khusuwan | Systems Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Teerachot Khusuwan – Computer Engineering student at SIIT, interested in cybersecurity, low-level systems, AI/ML, and robotics." />
-  <meta name="theme-color" content="#f7f5f0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
-    rel="stylesheet"
-  />
+  <meta name="description" content="Teerachot Khusuwan – systems engineer working from hardware and security to machine learning and the web. Computer Engineering, SIIT, Thammasat University." />
+  <meta name="theme-color" content="#f8f9fb" />
+  <link rel="preload" href="fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Skip link for keyboard users -->
-  <a href="#main" class="skip-link">Skip to main content</a>
+  <a href="#main" class="skip-link" data-i18n="skip">Skip to main content</a>
 
-  <div class="page">
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a class="brand" href="#main" aria-label="Teerachot Khusuwan home">
-          <span class="brand-mark" aria-hidden="true">TK</span>
-          <span>
-            <span class="site-title">Teerachot Khusuwan</span>
-            <span class="site-subtitle">Computer Engineering, SIIT</span>
-          </span>
-        </a>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#publications">Publications</a>
-          <a href="#tech-stack">Tech Stack</a>
-          <a href="#contact">Contact</a>
-        </nav>
+  <header class="site-header">
+    <div class="wrap site-header-inner">
+      <a class="brand" href="#top" aria-label="Teerachot Khusuwan, back to top" data-i18n-label="a.top">
+        <span class="brand-mark" aria-hidden="true">TK</span>
+        <span class="brand-name">Teerachot Khusuwan</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary" data-i18n-label="a.nav">
+        <a href="#work" data-i18n="nav.work">Work</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#toolkit" data-i18n="nav.toolkit">Toolkit</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language" data-i18n-label="a.lang">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="th" aria-pressed="false" lang="th">ไทย</button>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main id="main" class="content">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Computer Engineering Student</p>
-          <h2 class="hero-title">Security-focused developer working across systems, web, and applied ML.</h2>
-          <p class="hero-lead">
-            I build practical software for detection, automation, and research workflows. Recent work includes SQL injection detection, clinical screening tools, Discord automation, and deep learning for OCT image analysis.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="mailto:teerachot.khusuwan@gmail.com">Contact</a>
-            <a class="btn ghost" href="Teerachot_Khusuwan_Resume2026.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-            <a class="btn ghost" href="https://github.com/HamGNX" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-          <div class="hero-meta">
-            <div class="meta-item">
-              <span class="meta-label">Current focus</span>
-              <span class="meta-value">Network security and software development</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Location</span>
-              <span class="meta-value">Pathum Thani, Thailand</span>
-            </div>
-          </div>
-        </div>
-        <div class="profile-panel" aria-label="Profile summary">
-          <div>
-            <span class="panel-label">Class</span>
-            <strong>2026</strong>
-          </div>
-          <div>
-            <span class="panel-label">Domains</span>
-            <strong>Cybersecurity, ML, IoT</strong>
-          </div>
-          <div>
-            <span class="panel-label">Tools</span>
-            <strong>Python, PHP, C++, CUDA</strong>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="card">
-        <h2>About</h2>
-        <div class="about-grid">
-          <div>
-            <p class="lead">
-              I am a computer engineering student at Sirindhorn International Institute of Technology, Thammasat University. My work is strongest where software meets constraints: security validation, small automation systems, computer vision prototypes, and hardware-backed experiments.
-            </p>
-            <p class="muted">I am currently looking for internship and collaboration opportunities where I can contribute to practical engineering work and learn from experienced teams.</p>
-          </div>
-          <ul class="about-list">
-            <li>Computer Engineering at SIIT, Thammasat University</li>
-            <li>Interested in secure systems, exploit behavior, and defensive tooling</li>
-            <li>Builds JetBot and Jetson Nano projects for robotics and perception experiments</li>
-            <li>Comfortable moving from prototype to working CLI tools, dashboards, and web apps</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="projects" class="card">
-        <h2>Selected Projects</h2>
-        <div class="project-grid">
-          <div class="project-item">
-            <h3 class="project-title">SQLIX: Injection Detection</h3>
-            <p class="project-desc">
-              Detection framework using regex rules, keyword randomization, and Petri nets to identify Boolean-based SQL injection patterns, with Discord alerts for suspicious requests.
-            </p>
-            <div class="tag-row">
-              <span>Python</span>
-              <span>Flask</span>
-              <span>Cybersecurity</span>
-            </div>
-          </div>
-      
-          <div class="project-item">
-            <h3 class="project-title">Taek8: TFT Tracker</h3>
-            <p class="project-desc">
-              Discord bot that integrates with the Riot API to track Teamfight Tactics matches, automate daily scoreboards, and send placement alerts.
-            </p>
-            <div class="tag-row">
-              <span>Nextcord</span>
-              <span>Riot API</span>
-              <span>Automation</span>
-            </div>
-          </div>
-      
-          <div class="project-item">
-            <h3 class="project-title">Auto Vision Screening</h3>
-            <p class="project-desc">
-              Hospital screening prototype that displays randomized optotypes and validates patient responses to reduce repetitive manual work for staff.
-            </p>
-            <div class="tag-row">
-              <span>OpenCV</span>
-              <span>Arduino</span>
-              <span>Python</span>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <h3 class="project-title">Clinic Appointment System</h3>
-            <p class="project-desc">
-              Web platform for scheduling appointments and managing patient and doctor records through a PHP application backed by MySQL.
-            </p>
-            <div class="tag-row">
-              <span>PHP</span>
-              <span>MySQL</span>
-              <span>Full stack</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="publications" class="card">
-        <h2>Publications</h2>
-        <div class="publication-item">
-          <a
-            href="https://ieeexplore.ieee.org/document/11432384"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="pub-link"
-          >
-            <span class="pub-title">
-              Rootkit and Bootkit Detection Using TEE–TPM Architecture with Machine Learning and Blockchain Verification
-            </span>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="name">
+      <div class="wrap">
+        <h1 id="name" class="hero-name">Teerachot Khusuwan</h1>
+        <p class="hero-role" data-i18n="hero.role">
+          Systems engineer working across the full range, from hardware and security to machine learning and the web.
+        </p>
+        <p class="hero-status">
+          <span data-i18n="hero.status">Currently employed · Open to full-time offers</span>
+          <span class="hero-sep" aria-hidden="true"></span>
+          <span data-i18n="hero.location">Pathum Thani, Thailand</span>
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="Teerachot_Khusuwan_Resume2026.pdf" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12" /></svg>
+            <span data-i18n="btn.resume">Download resume</span>
           </a>
-          <p class="muted publication-authors">
-            Natchanan Koson, Chonnawee Udompongpipat,
-            <strong>Teerachot Khusuwan</strong>, Somchart Fugkeaw
+          <a class="btn btn-quiet" href="mailto:teerachot.khusuwan@gmail.com" data-i18n="btn.email">Email</a>
+          <a class="btn btn-quiet" href="https://github.com/HamGNX" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn-quiet" href="https://linkedin.com/in/teerachot-khusuwan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+
+        <figure class="spectrum" aria-labelledby="spectrum-caption">
+          <figcaption id="spectrum-caption" class="visually-hidden" data-i18n="spectrum.caption">
+            Projects and papers placed along a range from hardware to the web
+          </figcaption>
+          <div class="spectrum-bands" aria-hidden="true">
+            <span class="band band-hw" data-i18n="band.hw">Devices &amp; sensors</span>
+            <span class="band band-sec" data-i18n="band.sec">Security</span>
+            <span class="band band-ml" data-i18n="band.ml">Machine learning</span>
+            <span class="band band-web" data-i18n="band.web">Web &amp; automation</span>
+          </div>
+          <div class="spectrum-track">
+            <span class="spectrum-line" aria-hidden="true"></span>
+            <ol class="spectrum-marks">
+              <li style="--pos: 11" class="mark hw"><a href="#w-vision" data-target="w-vision"><strong>Auto Vision Screening</strong><span data-i18n="mark.vision">Hospital screening prototype</span><span class="mark-band" data-i18n="band.hw">Devices &amp; sensors</span></a></li>
+              <li style="--pos: 31" class="mark sec"><a href="#w-rootkit" data-target="w-rootkit"><strong data-i18n="mark.rootkitTitle">Rootkit &amp; bootkit detection</strong><span data-i18n="mark.paper">Peer-reviewed paper</span><span class="mark-band" data-i18n="band.sec">Security</span></a></li>
+              <li style="--pos: 45" class="mark sec"><a href="#w-sqlix" data-target="w-sqlix"><strong>SQLIX</strong><span data-i18n="mark.sqlix">Attack detection</span><span class="mark-band" data-i18n="band.sec">Security</span></a></li>
+              <li style="--pos: 62" class="mark ml"><a href="#w-oct" data-target="w-oct"><strong data-i18n="mark.octTitle">Eye-scan analysis</strong><span data-i18n="mark.paper">Peer-reviewed paper</span><span class="mark-band" data-i18n="band.ml">Machine learning</span></a></li>
+              <li style="--pos: 79" class="mark web"><a href="#w-clinic" data-target="w-clinic"><strong data-i18n="mark.clinicTitle">Clinic appointments</strong><span data-i18n="mark.clinic">Booking web app</span><span class="mark-band" data-i18n="band.web">Web &amp; automation</span></a></li>
+              <li style="--pos: 93" class="mark web"><a href="#w-taek8" data-target="w-taek8"><strong>Taek8</strong><span data-i18n="mark.taek8">Discord bot</span><span class="mark-band" data-i18n="band.web">Web &amp; automation</span></a></li>
+            </ol>
+          </div>
+          <div class="spectrum-ends" aria-hidden="true">
+            <span data-i18n="end.hw">Hardware</span>
+            <span data-i18n="end.web">Web</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="work" class="section" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="work-title" data-i18n="work.title">Work, from hardware to web</h2>
+          <p data-i18n="work.note">Four projects and two peer-reviewed papers, in the order they sit on the range above.</p>
+        </header>
+
+        <ol class="work-list">
+          <li id="w-vision" class="work hw">
+            <p class="work-band" data-i18n="band.hw">Devices &amp; sensors</p>
+            <div class="work-body">
+              <h3>Auto Vision Screening</h3>
+              <p data-i18n="w.vision">Hospital screening prototype that displays randomized optotypes and validates patient responses to reduce repetitive manual work for staff.</p>
+            </div>
+            <ul class="work-tags" aria-label="Built with" data-i18n-label="a.built"><li>OpenCV</li><li>Arduino</li><li>Python</li></ul>
+          </li>
+
+          <li id="w-rootkit" class="work sec">
+            <p class="work-band" data-i18n="band.sec">Security</p>
+            <div class="work-body">
+              <h3>
+                <a href="https://ieeexplore.ieee.org/document/11432384" target="_blank" rel="noopener noreferrer">Rootkit and Bootkit Detection Using TEE–TPM Architecture with Machine Learning and Blockchain Verification<svg class="icon icon-out" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 13 14 6m0 0H8m6 0v6" /></svg></a>
+              </h3>
+              <p data-i18n="w.rootkit">Detecting low-level malware with trusted hardware (TEE and TPM), machine learning, and blockchain verification.</p>
+              <p class="work-cite">
+                Natchanan Koson, Chonnawee Udompongpipat, <strong>Teerachot Khusuwan</strong>, Somchart Fugkeaw.
+                2026 18th International Conference on Knowledge and Smart Technology (KST), 372–378.
+                <a href="https://doi.org/10.1109/KST67832.2026.11432384" target="_blank" rel="noopener noreferrer">DOI 10.1109/KST67832.2026.11432384</a>
+              </p>
+            </div>
+            <p class="work-kind" data-i18n="kind.paper">Peer-reviewed paper · IEEE</p>
+          </li>
+
+          <li id="w-sqlix" class="work sec">
+            <p class="work-band" data-i18n="band.sec">Security</p>
+            <div class="work-body">
+              <h3>SQLIX: Injection Detection</h3>
+              <p data-i18n="w.sqlix">Detection framework using regex rules, keyword randomization, and Petri nets to identify Boolean-based SQL injection patterns, with Discord alerts for suspicious requests.</p>
+            </div>
+            <ul class="work-tags" aria-label="Built with" data-i18n-label="a.built"><li>Python</li><li>Flask</li><li>Cybersecurity</li></ul>
+          </li>
+
+          <li id="w-oct" class="work ml">
+            <p class="work-band" data-i18n="band.ml">Machine learning</p>
+            <div class="work-body">
+              <h3>
+                <a href="https://ph02.tci-thaijo.org/index.php/SciTechAsia/article/view/261438" target="_blank" rel="noopener noreferrer">Automated Detection and Segmentation of Choroidal Neovascularization in OCT Using Deep Learning<svg class="icon icon-out" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 13 14 6m0 0H8m6 0v6" /></svg></a>
+              </h3>
+              <p data-i18n="w.oct">Deep learning that finds and outlines choroidal neovascularization, a sight-threatening eye condition, in OCT retinal scans.</p>
+              <p class="work-cite">
+                Pawaris Panyasombat, Anawin Srivoranan, Chanyanud Sriyota, <strong>Teerachot Khusuwan</strong>, Pakinee Aimmanee.
+                Science &amp; Technology Asia, 30(3), 40–50 (2025).
+              </p>
+            </div>
+            <p class="work-kind" data-i18n="kind.journal">Peer-reviewed paper · Journal</p>
+          </li>
+
+          <li id="w-clinic" class="work web">
+            <p class="work-band" data-i18n="band.web">Web &amp; automation</p>
+            <div class="work-body">
+              <h3>Clinic Appointment System</h3>
+              <p data-i18n="w.clinic">Web platform for scheduling appointments and managing patient and doctor records through a PHP application backed by MySQL.</p>
+            </div>
+            <ul class="work-tags" aria-label="Built with" data-i18n-label="a.built"><li>PHP</li><li>MySQL</li><li>Full stack</li></ul>
+          </li>
+
+          <li id="w-taek8" class="work web">
+            <p class="work-band" data-i18n="band.web">Web &amp; automation</p>
+            <div class="work-body">
+              <h3>Taek8: TFT Tracker</h3>
+              <p data-i18n="w.taek8">Discord bot that integrates with the Riot API to track Teamfight Tactics matches, automate daily scoreboards, and send placement alerts.</p>
+            </div>
+            <ul class="work-tags" aria-label="Built with" data-i18n-label="a.built"><li>Nextcord</li><li>Riot API</li><li>Automation</li></ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="wrap about">
+        <h2 id="about-title" data-i18n="about.title">About</h2>
+        <div class="about-copy">
+          <p class="about-lead" data-i18n="about.p1">
+            I’m a computer engineer from Sirindhorn International Institute of Technology (SIIT), Thammasat University. My work is strongest where software meets constraints: security validation, small automation systems, computer vision prototypes, and hardware-backed experiments.
           </p>
-          <span class="pub-journal">
-            2026 18th International Conference on Knowledge and Smart Technology (KST), 372–378
-          </span>
-          <a
-            class="pub-doi"
-            href="https://doi.org/10.1109/KST67832.2026.11432384"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            DOI: 10.1109/KST67832.2026.11432384
-          </a>
-        </div>
-
-        <div class="publication-item">
-          <a
-            href="https://ph02.tci-thaijo.org/index.php/SciTechAsia/article/view/261438"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="pub-link"
-          >
-            <span class="pub-title">
-              Automated Detection and Segmentation of Choroidal Neovascularization in OCT Using Deep Learning
-            </span>
-          </a>
-          <p class="muted publication-authors">
-            Pawaris Panyasombat, Anawin Srivoranan, Chanyanud Sriyota,
-            <strong>Teerachot Khusuwan</strong>, Pakinee Aimmanee
+          <p data-i18n="about.p2">
+            I’m comfortable taking an idea from prototype to a working tool, dashboard, or web app, and I’m open to full-time roles and collaborations where that range is useful.
           </p>
-          <span class="pub-journal">Science &amp; Technology Asia, 30(3), 40–50 (2025)</span>
         </div>
-      </section>
+        <dl class="about-facts">
+          <div>
+            <dt data-i18n="fact.edu">Education</dt>
+            <dd data-i18n="fact.eduValue">Computer Engineering, SIIT, Thammasat University · Class of 2026</dd>
+          </div>
+          <div>
+            <dt data-i18n="fact.base">Based in</dt>
+            <dd data-i18n="hero.location">Pathum Thani, Thailand</dd>
+          </div>
+          <div>
+            <dt data-i18n="fact.status">Status</dt>
+            <dd data-i18n="hero.status">Currently employed · Open to full-time offers</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
 
-      <section id="tech-stack" class="card">
-        <h2>Technical Stack</h2>
-        <p class="section-note">Tools I have used in coursework, projects, research, and security experiments.</p>
-
-        <div class="stack-group">
-          <h3>Core &amp; Systems</h3>
-          <div class="tag-row">
-            <span>Python</span>
-            <span>C++</span>
-            <span>C</span>
-            <span>Bash</span>
-            <span>CUDA</span>
-            <span>Docker</span>
+    <section id="toolkit" class="section" aria-labelledby="toolkit-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="toolkit-title" data-i18n="toolkit.title">Toolkit</h2>
+          <p data-i18n="toolkit.note">Tools used across projects, research, and security experiments.</p>
+        </header>
+        <div class="toolkit">
+          <div class="tool-group hw">
+            <h3 data-i18n="tool.hw">IoT &amp; hardware</h3>
+            <ul><li>Raspberry Pi</li><li>Arduino</li><li>Jetson Nano</li><li>Home Assistant</li></ul>
+          </div>
+          <div class="tool-group sec">
+            <h3 data-i18n="tool.sys">Core &amp; systems</h3>
+            <ul><li>Python</li><li>C</li><li>C++</li><li>Bash</li><li>CUDA</li><li>Docker</li></ul>
+          </div>
+          <div class="tool-group ml">
+            <h3 data-i18n="tool.ml">Data science &amp; ML</h3>
+            <ul><li>PyTorch</li><li>OpenCV</li><li>NumPy</li><li>Pandas</li><li>scikit-learn</li></ul>
+          </div>
+          <div class="tool-group web">
+            <h3 data-i18n="tool.web">Web &amp; database</h3>
+            <ul><li>Flask</li><li>PHP</li><li>MySQL</li><li>HTML</li><li>JavaScript</li></ul>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="stack-group">
-          <h3>Data Science &amp; ML</h3>
-          <div class="tag-row">
-            <span>PyTorch</span>
-            <span>OpenCV</span>
-            <span>NumPy</span>
-            <span>Pandas</span>
-            <span>scikit-learn</span>
-          </div>
-        </div>
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title" data-i18n="contact.title">Let’s talk.</h2>
+        <p class="contact-note" data-i18n="contact.note">Open to full-time roles and project collaboration.</p>
+        <a class="contact-email" href="mailto:teerachot.khusuwan@gmail.com">teerachot.khusuwan@gmail.com</a>
+        <ul class="contact-links">
+          <li><a href="Teerachot_Khusuwan_Resume2026.pdf" target="_blank" rel="noopener noreferrer" data-i18n="contact.resume">Resume (PDF)</a></li>
+          <li><a href="https://github.com/HamGNX" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/teerachot-khusuwan" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-        <div class="stack-group">
-          <h3>Web &amp; Database</h3>
-          <div class="tag-row">
-            <span>Flask</span>
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>HTML</span>
-            <span>JavaScript</span>
-          </div>
-        </div>
-
-        <div class="stack-group">
-          <h3>IoT &amp; Hardware</h3>
-          <div class="tag-row">
-            <span>Raspberry Pi</span>
-            <span>Arduino</span>
-            <span>Jetson Nano</span>
-            <span>Home Assistant</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="card contact-card">
-        <div>
-          <h2>Contact</h2>
-          <p class="section-note">Open to internships, project collaboration, and security-focused engineering work.</p>
-        </div>
-        <div class="contact-links">
-          <a href="mailto:teerachot.khusuwan@gmail.com">Email</a>
-          <a href="https://github.com/HamGNX" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/teerachot-khusuwan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://facebook.com/ham.khu03" target="_blank" rel="noopener noreferrer">Facebook</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>© <span id="year"></span> Teerachot Khusuwan — teerachot.com</p>
-    </footer>
-  </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Teerachot Khusuwan · teerachot.com</p>
+    </div>
+  </footer>
 
   <script>
-    // tiny helper to keep footer year updated
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Thai copy is a draft pending Teerachot's review.
+    const th = {
+      'skip': 'ข้ามไปยังเนื้อหาหลัก',
+      'nav.work': 'ผลงาน',
+      'nav.about': 'เกี่ยวกับ',
+      'nav.toolkit': 'เครื่องมือ',
+      'nav.contact': 'ติดต่อ',
+      'hero.role': 'วิศวกรระบบที่ทำงานได้ครบทุกระดับ ตั้งแต่ฮาร์ดแวร์และความปลอดภัย ไปจนถึงแมชชีนเลิร์นนิงและเว็บ',
+      'hero.status': 'ปัจจุบันทำงานประจำ · เปิดรับข้อเสนองานเต็มเวลา',
+      'hero.location': 'ปทุมธานี ประเทศไทย',
+      'btn.resume': 'ดาวน์โหลดเรซูเม่',
+      'btn.email': 'อีเมล',
+      'spectrum.caption': 'โปรเจกต์และงานวิจัยที่วางเรียงตามช่วงตั้งแต่ฮาร์ดแวร์ถึงเว็บ',
+      'band.hw': 'อุปกรณ์และเซนเซอร์',
+      'band.sec': 'ความปลอดภัย',
+      'band.ml': 'แมชชีนเลิร์นนิง',
+      'band.web': 'เว็บและระบบอัตโนมัติ',
+      'mark.vision': 'ต้นแบบระบบคัดกรองในโรงพยาบาล',
+      'mark.rootkitTitle': 'ตรวจจับรูทคิตและบูทคิต',
+      'mark.paper': 'งานวิจัยตีพิมพ์',
+      'mark.sqlix': 'ตรวจจับการโจมตี',
+      'mark.octTitle': 'วิเคราะห์ภาพสแกนตา',
+      'mark.clinicTitle': 'ระบบนัดหมายคลินิก',
+      'mark.clinic': 'เว็บแอปนัดหมาย',
+      'mark.taek8': 'บอท Discord',
+      'end.hw': 'ฮาร์ดแวร์',
+      'end.web': 'เว็บ',
+      'work.title': 'ผลงาน จากฮาร์ดแวร์ถึงเว็บ',
+      'work.note': 'โปรเจกต์ 4 ชิ้นและงานวิจัยตีพิมพ์ 2 ชิ้น เรียงตามตำแหน่งบนแถบด้านบน',
+      'w.vision': 'ต้นแบบระบบคัดกรองสายตาสำหรับโรงพยาบาล แสดงสัญลักษณ์ทดสอบแบบสุ่มและตรวจคำตอบของผู้ป่วย เพื่อลดงานซ้ำ ๆ ของเจ้าหน้าที่',
+      'w.rootkit': 'ตรวจจับมัลแวร์ระดับล่างด้วยฮาร์ดแวร์ที่เชื่อถือได้ (TEE และ TPM) แมชชีนเลิร์นนิง และการยืนยันด้วยบล็อกเชน',
+      'w.sqlix': 'เฟรมเวิร์กตรวจจับ SQL injection แบบ Boolean-based ด้วยกฎ regex การสุ่มคีย์เวิร์ด และ Petri net พร้อมแจ้งเตือนคำขอที่น่าสงสัยผ่าน Discord',
+      'w.oct': 'ใช้ดีปเลิร์นนิงตรวจหาและระบุขอบเขตภาวะหลอดเลือดงอกผิดปกติใต้จอตา (CNV) ซึ่งเป็นภาวะที่คุกคามการมองเห็น ในภาพสแกน OCT',
+      'w.clinic': 'แพลตฟอร์มเว็บสำหรับนัดหมาย และจัดการข้อมูลผู้ป่วยและแพทย์ พัฒนาด้วย PHP และ MySQL',
+      'w.taek8': 'บอท Discord ที่เชื่อมต่อ Riot API เพื่อติดตามแมตช์ Teamfight Tactics สรุปตารางคะแนนรายวันอัตโนมัติ และแจ้งเตือนอันดับ',
+      'kind.paper': 'งานวิจัยตีพิมพ์ · IEEE',
+      'kind.journal': 'งานวิจัยตีพิมพ์ · วารสาร',
+      'about.title': 'เกี่ยวกับ',
+      'about.p1': 'วิศวกรคอมพิวเตอร์จากสถาบันเทคโนโลยีนานาชาติสิรินธร (SIIT) มหาวิทยาลัยธรรมศาสตร์ ถนัดงานที่ซอฟต์แวร์ต้องทำงานภายใต้ข้อจำกัด เช่น การตรวจสอบความปลอดภัย ระบบอัตโนมัติขนาดเล็ก ต้นแบบคอมพิวเตอร์วิทัศน์ และการทดลองที่ใช้ฮาร์ดแวร์จริง',
+      'about.p2': 'พัฒนาได้ตั้งแต่ต้นแบบจนเป็นเครื่องมือ แดชบอร์ด หรือเว็บแอปที่ใช้งานได้จริง และเปิดรับงานประจำหรือความร่วมมือที่ต้องการความสามารถที่หลากหลายนี้',
+      'fact.edu': 'การศึกษา',
+      'fact.eduValue': 'วิศวกรรมคอมพิวเตอร์ SIIT มหาวิทยาลัยธรรมศาสตร์ · รุ่นปี 2026',
+      'fact.base': 'ที่อยู่',
+      'fact.status': 'สถานะ',
+      'toolkit.title': 'เครื่องมือที่ใช้',
+      'toolkit.note': 'เครื่องมือที่ใช้ในโปรเจกต์ งานวิจัย และการทดลองด้านความปลอดภัย',
+      'tool.hw': 'IoT และฮาร์ดแวร์',
+      'tool.sys': 'ภาษาหลักและระบบ',
+      'tool.ml': 'วิทยาการข้อมูลและ ML',
+      'tool.web': 'เว็บและฐานข้อมูล',
+      'contact.title': 'ติดต่อ',
+      'contact.note': 'เปิดรับงานประจำและความร่วมมือในโปรเจกต์',
+      'contact.resume': 'เรซูเม่ (PDF)',
+      'a.top': 'Teerachot Khusuwan กลับไปด้านบน',
+      'a.nav': 'เมนูหลัก',
+      'a.lang': 'ภาษา',
+      'a.built': 'เครื่องมือที่ใช้',
+      'meta.title': 'Teerachot Khusuwan | วิศวกรระบบ',
+      'meta.desc': 'Teerachot Khusuwan วิศวกรระบบที่ทำงานตั้งแต่ฮาร์ดแวร์และความปลอดภัย ไปจนถึงแมชชีนเลิร์นนิงและเว็บ วิศวกรรมคอมพิวเตอร์ SIIT มหาวิทยาลัยธรรมศาสตร์'
+    };
+
+    const nodes = document.querySelectorAll('[data-i18n]');
+    nodes.forEach((el) => { el.dataset.en = el.innerHTML; });
+    const labelled = document.querySelectorAll('[data-i18n-label]');
+    labelled.forEach((el) => { el.dataset.enLabel = el.getAttribute('aria-label'); });
+    const metaDesc = document.querySelector('meta[name="description"]');
+    const en = { title: document.title, desc: metaDesc.content };
+    const buttons = document.querySelectorAll('.lang-switch button');
+
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      nodes.forEach((el) => {
+        const key = el.dataset.i18n;
+        el.innerHTML = lang === 'th' && th[key] ? th[key] : el.dataset.en;
+      });
+      labelled.forEach((el) => {
+        el.setAttribute('aria-label', lang === 'th' ? th[el.dataset.i18nLabel] : el.dataset.enLabel);
+      });
+      document.title = lang === 'th' ? th['meta.title'] : en.title;
+      metaDesc.content = lang === 'th' ? th['meta.desc'] : en.desc;
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+
+    buttons.forEach((b) => b.addEventListener('click', () => setLang(b.dataset.lang)));
+    let saved = new URLSearchParams(location.search).get('lang');
+    if (!saved) { try { saved = localStorage.getItem('lang'); } catch (e) {} }
+    if (saved === 'th') setLang('th');
+
+    // Spectrum marker and work row light each other up.
+    document.querySelectorAll('.spectrum-marks a').forEach((a) => {
+      const row = document.getElementById(a.dataset.target);
+      const on = () => { a.parentElement.classList.add('is-lit'); row.classList.add('is-lit'); };
+      const off = () => { a.parentElement.classList.remove('is-lit'); row.classList.remove('is-lit'); };
+      ['mouseenter', 'focus'].forEach((e) => { a.addEventListener(e, on); row.addEventListener(e === 'focus' ? 'focusin' : e, on); });
+      ['mouseleave', 'blur'].forEach((e) => { a.addEventListener(e, off); row.addEventListener(e === 'blur' ? 'focusout' : e, off); });
+    });
   </script>
 </body>
 </html>
